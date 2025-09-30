@@ -151,6 +151,8 @@ export const UserDetailsForm = forwardRef(
                       pattern: {
                         value: /^[0-9]{13}$/,
                         message: "The DPI must have 13 numeric digits",
+                        max: 13,
+                        min: 13,
                       },
                     })}
                     autoComplete="off"
@@ -169,6 +171,8 @@ export const UserDetailsForm = forwardRef(
                       pattern: {
                         value: /^[0-9]{8,15}$/,
                         message: "Check the telephone",
+                        max: 6,
+                        min: 6,
                       },
                     })}
                     autoComplete="off"

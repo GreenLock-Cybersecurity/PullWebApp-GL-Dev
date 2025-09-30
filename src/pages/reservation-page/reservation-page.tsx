@@ -46,7 +46,6 @@ export const ReservationPage = () => {
     try {
       postBookingRequest(finalData)
         .then((data) => {
-          console.log(data);
           setIsLoading(false);
           if (data.status === 201) {
             navigate(`/venue/${venueId}/booking/${reservationDate}/confirmed`);
@@ -60,8 +59,6 @@ export const ReservationPage = () => {
       console.error("Error formatting reservation data:", error);
       setIsLoading(false);
     }
-
-    console.log("Formatted reservation data:", finalData);
   };
 
   return (
